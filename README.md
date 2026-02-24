@@ -1,30 +1,33 @@
-****PlutoSDR Radar Analiz Sistemi (HUB 10)****
-Bu proje, PlutoSDR cihazından alınan spektrum verilerini görselleştirmek için geliştirilmiş bir Radar Analiz Arayüzüdür. Projenin en büyük özelliği, bir Bilgisayar Mühendisliği öğrencisi olarak tamamen yapay zeka asistanları (Claude & Gemini) ile kolaboratif bir şekilde geliştirilmiş olmasıdır.
+# PlutoSDR Radar Analiz Sistemi (HUB 10)
 
-****Yapay Zeka İş Bölümü (Development Workflow)
-Bu uygulama, farklı yapay zeka modellerinin güçlü yanları birleştirilerek inşa edilmiştir:
+Bu çalışma, PlutoSDR donanımı aracılığıyla elde edilen spektrum verilerinin gerçek zamanlı görselleştirilmesi ve analizi için geliştirilmiş bir arayüz uygulamasıdır. Balıkesir Üniversitesi Bilgisayar Mühendisliği bölümü bünyesindeki eğitim faaliyetleri kapsamında hazırlanmıştır.
 
-Claude: Uygulamanın ana iskeletini, giriş sayfasını (Landing Page), butonların mantıksal kurgusunu ve arayüzdeki ikon yerleşimlerini oluşturmuştur.
-Gemini (Google): Ham sinyal verisinin grafiğe dökülmesi, grafik ekranının tasarımı, "makyaj" denilen görsel iyileştirmeler (hizalamalar, renkler, boşluklar) ve tepe noktası bulma algoritmasının optimizasyonunu gerçekleştirmiştir.
-Yiğit Erdoğdu: Bir "AI Orchestrator" olarak tüm bu parçaları birleştirmiş, sistemin akışını yönetmiş ve donanım uyumluluğunu denetlemiştir.
+## Geliştirme Metodolojisi ve Yapay Zeka İş Birliği
 
-****Mevcut Özellikler
-Gerçek Zamanlı Spektrum Grafiği: PlutoSDR verilerini akıcı bir şekilde ekrana yansıtır.
-Gelişmiş Grafik Yerleşimi: Ekranın üst ve alt kısmından optimize edilmiş boşluklarla tam boyutlu analiz imkanı sunar.
-Otomatik Peak (Tepe) Tespiti: Grafik üzerindeki en güçlü sinyalleri kırmızı noktalarla işaretler ve listeler.
-Modern Karanlık Mod UI: PyQt5 kullanılarak tasarlanmış, göz yormayan profesyonel tasarım.
+Projenin geliştirme sürecinde modern yazılım mühendisliği yaklaşımları ve yapay zeka destekli kodlama tekniklerinden yararlanılmıştır:
 
-****Gereksinimler
-Sistemi çalıştırmak için aşağıdaki Python kütüphaneleri gereklidir:
+* **Sistem Mimarisi ve Mantıksal Kurgu:** Uygulamanın temel iskeleti, giriş sayfası tasarımı ve arayüzdeki fonksiyonel bileşenlerin yerleşimi Claude (Anthropic) asistanlığı ile yapılandırılmıştır.
+* **Görselleştirme ve Grafik Optimizasyonu:** Spektrum verilerinin grafik üzerine işlenmesi, arayüzün estetik düzenlemeleri, veri yerleşimi ve sinyal işleme algoritmalarının optimizasyonu Gemini (Google) asistanlığı ile gerçekleştirilmiştir.
+* **Sistem Entegrasyonu:** Proje sahibi Yiğit Erdoğdu, bir "AI Orchestrator" rolüyle farklı modellerden gelen çıktıları birleştirmiş, donanım uyumluluğunu sağlamış ve sistemin son halini yönetmiştir.
 
-PyQt5
+## Teknik Özellikler
 
-Matplotlib
+* **Gerçek Zamanlı Spektrum Analizi:** PlutoSDR üzerinden gelen verilerin anlık ve akıcı bir şekilde görselleştirilmesi.
+* **Optimize Edilmiş Grafik Arayüzü:** Analiz ekranının üst ve alt bölgelerinde sağlanan dengeli yerleşim ile tam boyutlu veri takibi.
+* **Otomatik Sinyal Tespiti:** Spektrum üzerindeki pik noktalarının algoritma aracılığıyla tespit edilmesi ve görsel olarak işaretlenmesi.
+* **Modüler Arayüz Tasarımı:** PyQt5 kütüphanesi kullanılarak oluşturulmuş profesyonel karanlık mod tasarımı.
 
-NumPy
+## Teknik Gereksinimler
 
-SciPy
+Sistemin çalışması için aşağıdaki Python kütüphanelerinin kurulu olması gerekmektedir:
+* PyQt5
+* Matplotlib
+* NumPy
+* SciPy
 
-****Çalıştırma
-Projeyi klonladıktan sonra ana klasör içinde şu komutu çalıştırın:
+## Çalıştırma Talimatları
+
+Proje dosyalarının bulunduğu dizin içerisinde aşağıdaki komutu çalıştırarak uygulamayı başlatabilirsiniz:
+
+```bash
 python ana_uygulama.py
