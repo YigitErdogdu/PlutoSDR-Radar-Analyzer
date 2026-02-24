@@ -4,18 +4,19 @@ Bu çalışma, PlutoSDR donanımı aracılığıyla elde edilen spektrum veriler
 
 ## Geliştirme Metodolojisi ve Yapay Zeka İş Birliği
 
-Projenin geliştirme sürecinde modern yazılım mühendisliği yaklaşımları ve yapay zeka destekli kodlama tekniklerinden yararlanılmıştır:
+Projenin geliştirme sürecinde modern yazılım mühendisliği yaklaşımları ve yapay zeka destekli kodlama tekniklerinden (Claude ve Gemini) birer asistan olarak yararlanılmıştır:
 
-* **Sistem Mimarisi ve Mantıksal Kurgu:** Uygulamanın temel iskeleti, giriş sayfası tasarımı ve arayüzdeki fonksiyonel bileşenlerin yerleşimi Claude (Anthropic) asistanlığı ile yapılandırılmıştır.
-* **Görselleştirme ve Grafik Optimizasyonu:** Spektrum verilerinin grafik üzerine işlenmesi, arayüzün estetik düzenlemeleri, veri yerleşimi ve sinyal işleme algoritmalarının optimizasyonu Gemini (Google) asistanlığı ile gerçekleştirilmiştir.
-* **Sistem Entegrasyonu:** Proje sahibi Yiğit Erdoğdu, bir "AI Orchestrator" rolüyle farklı modellerden gelen çıktıları birleştirmiş, donanım uyumluluğunu sağlamış ve sistemin son halini yönetmiştir.
+* **Sistem Mimarisi:** Uygulamanın temel iskeleti, giriş sayfası tasarımı ve arayüzdeki fonksiyonel bileşenlerin yerleşimi Claude (Anthropic) asistanlığı ile yapılandırılmıştır.
+* **Görselleştirme ve Grafik Optimizasyonu:** Spektrum verilerinin grafik üzerine işlenmesi, arayüzün estetik düzenlemeleri ve sinyal işleme algoritmalarının optimizasyonu Gemini (Google) asistanlığı ile gerçekleştirilmiştir.
+* **Sistem Entegrasyonu:** Proje sahibi Yiğit Erdoğdu, tüm bu çıktıları birleştirmiş, donanım uyumluluğunu sağlamış ve sistemin son halini yönetmiştir.
 
-## Teknik Özellikler
+## Gelecek Planları ve Geliştirme Süreci
 
-* **Gerçek Zamanlı Spektrum Analizi:** PlutoSDR üzerinden gelen verilerin anlık ve akıcı bir şekilde görselleştirilmesi.
-* **Optimize Edilmiş Grafik Arayüzü:** Analiz ekranının üst ve alt bölgelerinde sağlanan dengeli yerleşim ile tam boyutlu veri takibi.
-* **Otomatik Sinyal Tespiti:** Spektrum üzerindeki pik noktalarının algoritma aracılığıyla tespit edilmesi ve görsel olarak işaretlenmesi.
-* **Modüler Arayüz Tasarımı:** PyQt5 kütüphanesi kullanılarak oluşturulmuş profesyonel karanlık mod tasarımı.
+Bu proje, dinamik ve geliştirmeye açık bir sistem mimarisi üzerine inşa edilmiştir. TEKNOFEST ve benzeri mühendislik yarışmaları için hedeflenen nihai sistem kapsamında aşağıdaki modüller üzerinde geliştirme çalışmaları devam etmektedir:
+
+* **İleri Sinyal Analizi:** Welch Metodu ve Güç Spektral Yoğunluğu (PSD) kestirimi entegrasyonu.
+* **Akıllı Enerji Tespiti:** Dinamik eşik değerleri (CFAR) ile sinyal ayrıştırma algoritmaları.
+* **Donanım Genişletme:** Farklı SDR donanımları ile uyumluluk ve çoklu anten desteği.
 
 ## Teknik Gereksinimler
 
@@ -25,9 +26,6 @@ Sistemin çalışması için aşağıdaki Python kütüphanelerinin kurulu olmas
 * NumPy
 * SciPy
 
-## Çalıştırma Talimatları
+## Telif Hakkı ve Lisans
 
-Proje dosyalarının bulunduğu dizin içerisinde aşağıdaki komutu çalıştırarak uygulamayı başlatabilirsiniz:
-
-```bash
-python ana_uygulama.py
+Copyright (c) 2026 Yiğit Erdoğdu. Tüm Hakları Saklıdır. Detaylı bilgi için LICENSE dosyasına bakınız.
